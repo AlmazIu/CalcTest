@@ -25,6 +25,7 @@ class CalcTest {
         int result = testcalc.diff(0, 99);
         Assertions.assertEquals(-99, result);
     }
+
     @ParameterizedTest(name = "#{index} - сложение {0} и {1} ожидаем {2}")
     @CsvSource({"1, 9, 10", "-9,10,1", "0,0,0"})
     @DisplayName("Проверка сложения параметризованная")
@@ -34,6 +35,7 @@ class CalcTest {
         int result = testcalc.summ(a, b);
         Assertions.assertEquals(expectedResult, result);
     }
+
     @ParameterizedTest(name = "#{index} - вычитание {0} и {1} ожидаем {2}")
     @CsvSource({"1, 9, -8", "-9,10,-19", "0,0,0"})
     @DisplayName("Проверка вычитания параметризованная")
